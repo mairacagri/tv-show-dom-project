@@ -6,14 +6,20 @@ body{
 }
 #root {
   color: rgb(5, 5, 5);
-  width: auto;
+  width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   padding: 8px;
+  overflow-x: hidden;
+  /* padding: 8px;
   overflow-x:hidden;
   margin: 0 auto;
   width: 100%;
   align-items: center;
-  text-align: center;
+  text-align: center; */
   /* display: grid;
     grid-template-columns: repeat (1fr, 1fr);
     grid-gap: 20px; */
@@ -24,6 +30,7 @@ body{
 #episode-wrapper {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   margin:auto; 
   max-width: 1200px; 
   word-wrap: break-word;
@@ -41,19 +48,30 @@ body{
   padding: 10px;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: auto 1fr auto;
 
 
 }
 
 .name {
   text-align: center;
-  font-size: 1rem;
+  font-size: 1.2rem;
   padding: 5px;
   grid-column:1/-1;
   grid-row:1/2;
   margin-bottom: 5px;
-  
+}
+
+.img-class {
+  width: 100%;
+  height: 250px;
+}
+
+.img-class img {
+  grid-column: 3 / 9;
+  grid-row: 2 / 3;
+  width: 100%;
+  height: 100%;
 }
 
 .summary {
@@ -61,7 +79,7 @@ body{
   grid-column: 1/-1;
   grid-row:3/-1;
 }
-.img-class{
+/* .img-class{
   width:400px;
   height: 250px; 
 }
@@ -70,7 +88,7 @@ body{
   grid-row:2/3;
   width:100%;
   height: 100%; 
-}
+} */
 
 #searchBar {
   width: 250px;
