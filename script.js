@@ -8,6 +8,7 @@ function setup() {
   makePageForEpisodes(allEpisodes);
   createSelectedEpisodes(allEpisodes);
 }
+
 //adding zero for seasons and  episodes under 10...now its global
 let twoDigit =(number) => {
   if(number < 10){
@@ -73,7 +74,7 @@ inputElem.addEventListener("input", (event)=>{
 
 //level 300 select 
 let selectEpisode = document.querySelector("#select");//from html
-//for below https://javascript.plainenglish.io/how-to-get-the-selected-value-from-a-dropdown-list-using-javascript-52ab93ab1af7
+
  
 const createSelectedEpisodes = (allEpisodes) => {
   allEpisodes.forEach( (episode)=>{
@@ -88,9 +89,7 @@ selectEpisode.addEventListener("change", (event)=>{
   //console.log(event.target.value);
   
   let userEpisode = allEpisodes.filter( (episode)=>{
-      let selectedEpisodeId = event.target.value;
-      // console.log(selectedEpisodeId,episode.id);
-      
+      let selectedEpisodeId = event.target.value;      
       return episode.id == selectedEpisodeId;   //from all epsodes this filtered will be shown the 
     })
     console.log(userEpisode);
